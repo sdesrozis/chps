@@ -37,3 +37,11 @@ ou
 Compilaton librairie dynamique :
 
     g++ -o libtest.so -shared *.o
+    
+Compilation avec chemin d'inclusion :
+
+    g++ -I<path> main.cpp
+
+Compilation avec link d'une librairie :
+
+    g++ -L<path> main.cpp -l<lib>
