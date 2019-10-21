@@ -1,39 +1,47 @@
 # Quelques commandes
 
-* compilation d'un binaire
+Compilation d'un binaire :
 
     g++ main.cpp 
 
-* compilation d'un fichier objet 
+Compilation d'un fichier objet :
 
     g++ -c foo.cpp
 
-* compilation multi-fichiers
+Compilation multi-fichiers :
 
     g++ main.cpp foo.cpp
 
-* compilation multi-fichiers par objet
+Compilation multi-fichiers par objet :
 
     g++ -c *.cpp
     g++ *.o
 
-* compilation librairie statique
+Compilation librairie statique :
 
     g++ *.o
     ar -r libtest.a *.o
 
-* inspecter une librairie statique
+Inspecter une librairie statique :
 
     nm -a libtest.a
 
-* compilation binaire avec librairie
+Compilation binaire avec librairie :
 
     g++ main.cpp libtest.a
+
 ou 
 
-    g++ main.cpp -L. -ltest)
+    g++ main.cpp -L. -ltest
 
-* compilaton librairie dynamique
+Compilaton librairie dynamique :
 
     g++ -o libtest.so -shared *.o
+    
+Compilation avec chemin d'inclusion :
 
+    g++ -I<path> main.cpp
+
+Compilation avec link d'une librairie :
+
+    g++ -L<path> main.cpp -l<lib>
